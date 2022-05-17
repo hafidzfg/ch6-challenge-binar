@@ -1,0 +1,27 @@
+{
+  "name": "challenge-ch6",
+  "version": "1.0.0",
+  "description": "Chapter 6 challenge for Binar Academy's Fullstack Web Development.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "express-js",
+    "node.js",
+    "api"
+  ],
+  "author": "Hafidz Firmansyah G.",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "ejs": "^3.0.2",
+    "express": "^4.17.3",
+    "pg": "^8.7.3",
+    "sequelize": "^6.19.0",
+    "sequelize-cli": "^6.4.1"
+  },
+  "devDependencies": {},
+  "private": false
+}

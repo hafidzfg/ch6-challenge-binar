@@ -1,0 +1,14 @@
+[
+  {
+    "id": 0,
+    "fullname": "Namaku Beto",
+    "email": "bebekroot@gmail.com",
+    "password": "root123"
+  },
+  {
+    "id": 1,
+    "fullname": "Space Marine",
+    "email": "ayamroot@yahoo.com",
+    "password": "admin789"
+  }
+]
