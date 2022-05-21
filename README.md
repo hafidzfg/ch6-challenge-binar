@@ -7,17 +7,17 @@ Chapter 6 challenge for Binar Academy's Fullstack Web Development.
 1. Install required dependencies
 
 ```
-npm start or yarn start
+npm install
 ```
 or
 ```
-yarn start
+yarn install
 ```
 
 2. Run the project
 
 ```
-npm start or yarn start
+npm start
 ```
 or
 ```
