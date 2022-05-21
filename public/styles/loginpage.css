@@ -92,7 +92,9 @@
   color: #ef3b3a;
 }
 body {
-  background: #9c835f !important; /* fallback for old browsers */
+  background: url("../assets/main-bg.jpg") no-repeat center;
+  background-size: cover;
+  background-position: center; /* fallback for old browsers */
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

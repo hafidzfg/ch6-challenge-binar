@@ -1,0 +1,82 @@
+<h2>User History</h2>
+<div class="row">
+    <div class="col-sm containerDashboard">
+        <table class="table table-bordered table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">user_id</th>
+                    <th scope="col">date_start</th>
+                    <th scope="col">first_played</th>
+                    <th scope="col">score</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <% userhistory.forEach(item=> { %>
+                    <tr>
+                        <th scope="row">
+                            <%= item.id %>
+                        </th>
+                        <td>
+                            <%= item.user_id %>
+                        </td>
+                        <td>
+                            <%= item.date_start %>
+                        </td>
+                        <td>
+                            <%= item.last_played %>
+                        </td>
+                        <td>
+                            <%= item.score %>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+
+        </table>
+
+    </div>
+    <div class="col-sm containerDashboard">
+        <form method="POST" action="/dashboard/post/history" class="form post-biodata">
+            <div class="container">
+                <div class="column">
+                    <div class="col-1">
+                        <input class="inputBaru" placeholder="user_id" name="user_id" type="text" required />
+                    </div>
+                    <div class="col-1">
+                        <input class="inputBaru" placeholder="score" name="score" type="number" />
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-warning mb-2">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-sm containerDashboard">
+        <form method="POST" action="/dashboard/update/history:user_id" class="form post-biodata">
+            <div class="container">
+                <div class="column">
+                    <div class="col-1">
+                        <input class="inputBaru" placeholder="user_id" name="user_id" type="text" required />
+                    </div>
+                    <div class="col-1">
+                        <input class="inputBaru" placeholder="score" name="score" type="score" />
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-success mb-2">UPDATE</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-5 containerDashboard">
+        <form method="post" action="/dashboard/delete/history:user_id" class="form delete-biodata">
+            <div class="container">
+                <div class="column">
+                    <div class="col-1">
+                        <input class="inputBaru" placeholder="user_id" name="user_id" type="text" required />
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-danger mb-2">DELETE</button>
+            </div>
+        </form>
+    </div>
+</div>

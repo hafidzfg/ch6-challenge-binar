@@ -1,0 +1,1 @@
+sequelize model:generate --name userHistory --attributes user_id:string,date_start:date,last_played:date,score:integer

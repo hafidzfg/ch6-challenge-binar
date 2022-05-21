@@ -1,0 +1,94 @@
+<h2>User Biodata</h2>
+<div class="row">
+    <div class="col-sm containerDashboard">
+        <table class="table table-bordered table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">id_user</th>
+                    <th scope="col">firstname</th>
+                    <th scope="col">lastname</th>
+                    <th scope="col">address</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <% users.forEach(item=> { %>
+                    <tr>
+                        <th scope="row">
+                            <%= item.id %>
+                        </th>
+                        <td>
+                            <%= item.id_user %>
+                        </td>
+                        <td>
+                            <%= item.firstname %>
+                        </td>
+                        <td>
+                            <%= item.lastname %>
+                        </td>
+                        <td>
+                            <%= item.address %>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+
+        </table>
+
+    </div>
+    <div class="col-sm containerDashboard">
+        <form method="POST" action="/dashboard/post/bio" class="form post-biodata">
+            <div class="container">
+                <div class="column">
+                    <div class="col-1">
+                        <input class="inputBaru" placeholder="id_user" name="id_user" type="text" required />
+                    </div>
+                    <div class="col-1">
+                        <input class="inputBaru" placeholder="firstname" name="firstname" type="text" />
+                    </div>
+                    <div class="col-1">
+                        <input class="inputBaru" placeholder="lastname" name="lastname" type="text" />
+                    </div>
+                    <div class="col-1">
+                        <input class="inputBaru" placeholder="address" name="address" type="text" />
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-warning mb-2">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-sm containerDashboard">
+        <form method="POST" action="/dashboard/update/bio:id_user" class="form post-biodata">
+            <div class="container">
+                <div class="column">
+                    <div class="col-1">
+                        <input class="inputBaru" placeholder="id_user" name="id_user" type="text" required />
+                    </div>
+                    <div class="col-1">
+                        <input class="inputBaru" placeholder="firstname" name="firstname" type="text" />
+                    </div>
+                    <div class="col-1">
+                        <input class="inputBaru" placeholder="lastname" name="lastname" type="text" />
+                    </div>
+                    <div class="col-1">
+                        <input class="inputBaru" placeholder="address" name="address" type="text" />
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-success mb-2">UPDATE</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-5 containerDashboard">
+        <form method="post" action="/dashboard/delete/bio:id_user" class="form delete-biodata">
+            <div class="container">
+                <div class="column">
+                    <div class="col-1">
+                        <input class="inputBaru" placeholder="id_user" name="id_user" type="text" required />
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-danger mb-2">DELETE</button>
+            </div>
+        </form>
+    </div>
+</div>

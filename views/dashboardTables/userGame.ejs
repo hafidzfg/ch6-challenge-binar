@@ -1,0 +1,84 @@
+<h2>User Games</h2>
+<div class="row">
+    <div class="col-sm containerDashboard">
+        <table class="table table-bordered table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">user_id</th>
+                    <th scope="col">email</th>
+                    <th scope="col">password</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <% usergames.forEach(item=> { %>
+                    <tr>
+                        <th scope="row">
+                            <%= item.id %>
+                        </th>
+                        <td>
+                            <%= item.user_id %>
+                        </td>
+                        <td>
+                            <%= item.email %>
+                        </td>
+                        <td>
+                            <%= item.password %>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+
+        </table>
+
+    </div>
+    <div class="col-sm containerDashboard">
+        <form method="POST" action="/dashboard/post/user" class="form post-biodata">
+            <div class="container">
+                <div class="column">
+                    <div class="col-1">
+                        <input class="inputBaru" placeholder="user_id" name="user_id" type="text" required />
+                    </div>
+                    <div class="col-1">
+                        <input class="inputBaru" placeholder="email" name="email" type="email" />
+                    </div>
+                    <div class="col-1">
+                        <input class="inputBaru" placeholder="password" name="password" type="password" />
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-warning mb-2">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-sm containerDashboard">
+        <form method="POST" action="/dashboard/update/user:user_id" class="form post-biodata">
+            <div class="container">
+                <div class="column">
+                    <div class="col-1">
+                        <input class="inputBaru" placeholder="user_id" name="user_id" type="text" required />
+                    </div>
+                    <div class="col-1">
+                        <input class="inputBaru" placeholder="email" name="email" type="email" />
+                    </div>
+                    <div class="col-1">
+                        <input class="inputBaru" placeholder="password" name="password" type="password" />
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-success mb-2">UPDATE</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-5 containerDashboard">
+        <form method="post" action="/dashboard/delete/user:user_id" class="form delete-biodata">
+            <div class="container">
+                <div class="column">
+                    <div class="col-1">
+                        <input class="inputBaru" placeholder="user_id" name="user_id" type="text" required />
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-danger mb-2">DELETE</button>
+            </div>
+        </form>
+    </div>
+</div>

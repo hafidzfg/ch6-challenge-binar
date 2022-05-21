@@ -4,24 +4,26 @@
   "description": "Chapter 6 challenge for Binar Academy's Fullstack Web Development.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "SET DEBUG=challenge-ch6:* & nodemon index.js"
   },
   "keywords": [
     "express-js",
     "node.js",
-    "api"
+    "api",
+    "postgres-sql"
   ],
   "author": "Hafidz Firmansyah G.",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.20.0",
     "cors": "^2.8.5",
+    "debug": "^4.3.4",
     "ejs": "^3.0.2",
     "express": "^4.17.3",
+    "nodemon": "^2.0.16",
     "pg": "^8.7.3",
     "sequelize": "^6.19.0",
     "sequelize-cli": "^6.4.1"
   },
-  "devDependencies": {},
   "private": false
 }
