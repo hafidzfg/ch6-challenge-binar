@@ -7,8 +7,11 @@ Chapter 6 challenge for Binar Academy's Fullstack Web Development.
 1. Install required dependencies
 
 ```
-npm install or yarn install
-
+npm start or yarn start
+```
+or
+```
+yarn start
 ```
 
 2. Run the project
@@ -16,15 +19,21 @@ npm install or yarn install
 ```
 npm start or yarn start
 ```
+or
+```
+yarn start
+```
 
 3. Open the project through your browser
 
 - [homepage](http://localhost:8080/)
-- [login](http://localhost:8080/login)
+- [user game login](http://localhost:8080/login)
 - [game](http://localhost:8080/game)
+- [admin login](http://localhost:8080/adminlogin)
+- [database dashboard](http://localhost:8080/dashboard)
 
 4. Login test
-
+user: root, password: root
 <!-- ## Add your files
 
 - [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
